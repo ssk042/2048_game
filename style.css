@@ -1,0 +1,18 @@
+.grid {     /* declaring grid class */
+    
+    display: flex;
+    flex-wrap: wrap;       /* making sure squares appear next to each other*/
+    width: 500px;
+    height: 500px;
+    background-color: blueviolet;
+    
+}  
+
+.grid div { /* for eachy square*/
+    width: 125px;
+    height: 125px;
+    background-color: aquamarine;
+    font-size: 65px;
+    text-align: center;
+    font-weight: bold;
+}
