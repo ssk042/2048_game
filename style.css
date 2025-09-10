@@ -49,10 +49,14 @@
 .grid div[data-value="1024"] { background: #edc53f; color: #f9f6f2; font-size: 35px; }
 .grid div[data-value="2048"] { background: #edc22e; color: #f9f6f2; font-size: 35px; }
 
+.game-container {
+    display: flex;
+    align-items: flex-start;    /* top-aligned */
+    gap: 20px;      /* gap between scoreboard and grid*/
+    padding: 20px;
+}
+
 .score-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
