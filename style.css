@@ -50,9 +50,12 @@
 .grid div[data-value="2048"] { background: #edc22e; color: #f9f6f2; font-size: 35px; }
 
 .score-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
-    justify-content: flex-end;      /* top right of page */
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .score-tile {
@@ -62,7 +65,6 @@
     text-align: center;
     color: #f9f6f2;
     font-family: 'Arial', sans-serif;
-    margin-left: 10px;
     min-width: 80px;
 }
 
