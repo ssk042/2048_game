@@ -65,3 +65,16 @@
     margin-left: 10px;
     min-width: 80px;
 }
+
+.score-label {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.score-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
