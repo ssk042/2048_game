@@ -32,8 +32,8 @@
     100%  {   transform: scale(1);    }
 }
 
-.grid div:not([data-value="0"]) {   /* animation lasts 0.2 secs */
-    animation: pop 0.2s ease-in-out;
+.pop{
+    animation: pop 0.2s ease-in-out;    /* animation lasts 0.2 secs */
 }
 
 /* colors per number like actual 2048 game */

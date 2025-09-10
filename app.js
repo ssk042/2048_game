@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // check if can place 2 at random square aka if square's value = 0:
         if(allSquares[randomNumber].innerHTML == 0) {
             allSquares[randomNumber].innerHTML = 2
+
+            // add pop animation
+            allSquares[randomNumber].classList.add('pop')
+            setTimeout(() => {
+                allSquares[randomNumber].classList.remove('pop')
+            }, 200)
+
             loser()
         } else doRandom()
 
@@ -145,6 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // adding:
                 let newValue = parseInt(allSquares[i].innerHTML) + parseInt(allSquares[i + 1].innerHTML)
                 allSquares[i].innerHTML = newValue
+
+                // add pop animation
+                allSquares[i].classList.add('pop')
+                setTimeout(() => {
+                    allSquares[i].classList.remove('pop')
+                }, 200)
+
                 allSquares[i + 1].innerHTML = 0
                 score += newValue
                 scoreDisplay.innerHTML = score
@@ -160,6 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // adding:
                 let newValue = parseInt(allSquares[i].innerHTML) + parseInt(allSquares[i + width].innerHTML)
                 allSquares[i].innerHTML = newValue
+                
+                // add pop animation
+                allSquares[i].classList.add('pop')
+                setTimeout(() => {
+                    allSquares[i].classList.remove('pop')
+                }, 200)
+                
                 allSquares[i + width].innerHTML = 0
                 score += newValue
                 scoreDisplay.innerHTML = score
