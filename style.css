@@ -1,18 +1,51 @@
 .grid {     /* declaring grid class */
     
-    display: flex;
-    flex-wrap: wrap;       /* making sure squares appear next to each other*/
     width: 500px;
     height: 500px;
-    background-color: blueviolet;
-    
+    background-color: #bbada0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+    grid-template-rows: repeat(4, 1fr);     /* 4 equal rows */
+    gap: 10px;          /* space between tiles */
+    padding: 10px;      /* smooth edges */
+    border-radius: 10px;
+
 }  
 
-.grid div { /* for eachy square*/
-    width: 125px;
-    height: 125px;
-    background-color: aquamarine;
-    font-size: 65px;
-    text-align: center;
+.grid div {    /* for eachy square */
+
+    background-color: #cdc1b4;  /* gray tile color for empty tile */
+    font-size: clamp(20px, 6vw, 65px);  /* font size range, so won't overflow when numbers are bigger*/   
     font-weight: bold;
+    color: #776e65;     
+    display: flex;              /* centering tile numbers */
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;         /* corners display */
+    transition: all 0.2s ease-in-out;   /* animation when numbers change */
+    transform: scale(1);
 }
+
+/* tile emphasis when changes */
+@keyframes pop {       /* goes from 80% of its size to 100% */
+    0%  {   transform: scale(0.8);    } 
+    100%  {   transform: scale(1);    }
+}
+
+.grid div:not([data-value="0"]) {   /* animation lasts 0.2 secs */
+    animation: pop 0.2s ease-in-out;
+}
+
+/* colors per number like actual 2048 game */
+.grid div[data-value="2"]    { background: #eee4da; color: #776e65; }
+.grid div[data-value="4"]    { background: #ede0c8; color: #776e65; }
+.grid div[data-value="8"]    { background: #f2b179; color: #f9f6f2; }
+.grid div[data-value="16"]   { background: #f59563; color: #f9f6f2; }
+.grid div[data-value="32"]   { background: #f67c5f; color: #f9f6f2; }
+.grid div[data-value="64"]   { background: #f65e3b; color: #f9f6f2; }
+.grid div[data-value="128"]  { background: #edcf72; color: #f9f6f2; font-size: 40px; }
+.grid div[data-value="256"]  { background: #edcc61; color: #f9f6f2; font-size: 40px; }
+.grid div[data-value="512"]  { background: #edc850; color: #f9f6f2; font-size: 40px; }
+.grid div[data-value="1024"] { background: #edc53f; color: #f9f6f2; font-size: 35px; }
+.grid div[data-value="2048"] { background: #edc22e; color: #f9f6f2; font-size: 35px; }
+
