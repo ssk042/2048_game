@@ -12,7 +12,7 @@
 
 }  
 
-.grid div {    /* for eachy square */
+.grid div {    /* for each square */
 
     background-color: #cdc1b4;  /* gray tile color for empty tile */
     font-size: clamp(20px, 6vw, 65px);  /* font size range, so won't overflow when numbers are bigger*/   
@@ -49,3 +49,19 @@
 .grid div[data-value="1024"] { background: #edc53f; color: #f9f6f2; font-size: 35px; }
 .grid div[data-value="2048"] { background: #edc22e; color: #f9f6f2; font-size: 35px; }
 
+.score-container {
+    display: flex;
+    justify-content: flex-end;      /* top right of page */
+    margin-bottom: 20px;
+}
+
+.score-tile {
+    background-color: #bbada0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-align: center;
+    color: #f9f6f2;
+    font-family: 'Arial', sans-serif;
+    margin-left: 10px;
+    min-width: 80px;
+}
